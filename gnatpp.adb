@@ -4,7 +4,7 @@ with Ada.Environment_Variables;
 with Ada.Directories; use Ada.Directories;
 with GNAT.OS_Lib; use GNAT.OS_Lib;
 
-procedure Gps is
+procedure Gnatpp is
    -- Ada_Launch is the default name, but is meant to be renamed
    -- to the executable name that this executable launches
 
@@ -21,7 +21,7 @@ procedure Gps is
    -- AdaCore GPS install location
 
    Prog        : String := Simple_Name(Command_Name);
-   Launch_Name : String := Root & "/bin/" & Prog & "_exe";
+   Launch_Name : String := Root & "/bin/" & "gnatpp";
    -- The file name to execute/launch
 
    Launch_Arguments :
@@ -126,6 +126,6 @@ begin
    end if;
    --Give return status back to calling os/environment.
 
-end Gps;
+end Gnatpp;
 
 
